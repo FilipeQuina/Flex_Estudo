@@ -3,11 +3,30 @@
 	<mx:Style source="ar.css"/>
 	<mx:Script>
 		<![CDATA[
-			import mx.controls.Alert
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			private function ganharDinheiro(event:Event):void{
+				Alert.show('Quer Ganahr Dinheiro','Alert2',3,this,escolhaDinheiro);
+			}
+			private function escolhaDinheiro(event:CloseEvent):void{
+				if(event.detail == Alert.YES)
+					label_dinheiro.text="Sim, ele quer ganhar Dinheiro";
+				else
+					label_dinheiro.text="Não, ele não quer ganhar Dinheiro";
+			}
+			private function timeFutebol(event:Event):void{
+				Alert.buttonWidth=200;
+				Alert.yesLabel="Internacional";
+				Alert.noLabel="Grêmio";
+				Alert.show('Qual é o seu time favorito?', 'Seu Time', 3);
+			}
 		]]>
 	</mx:Script>
 	<mx:Button x="288" y="143" width="338" height="35" label="Alert Simples"
 			   click="Alert.show('cliquei no botão simples','Mensagem Simples')" fontSize="20"/>
 	<mx:Label x="288" y="52" fontSize="34" text="Filipe aprendendo Flex"/>
 	<mx:Button x="359" y="186" width="211" height="27" label="Alert 2" click="Alert.show('cliquei no botão simples 2','Alert2',3)"/>
+	<mx:Button x="359" y="232" width="211" label="Alert Dinheiro" click="ganharDinheiro(event)"/>
+	<mx:Label id="label_dinheiro" x="600" y="235" width="345" color="#F40F0F"/>
+	<mx:Button x="359" y="269" width="211" label="Time Futebol" click="timeFutebol(event)"/>
 </mx:Application>
