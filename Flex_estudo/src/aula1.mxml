@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:s="library://ns.adobe.com/flex/spark">
+	<mx:Label x="-90" y="19" text="Video aulas" fontSize="14" color="red" 
+			  width="450" textAlign="center" mouseDownEffect="WipeRight"/>
+	<mx:Button x="48" y="255" label="Novo" color="yellow" width="100"
+			   height="40" fontSize="14" fontFamily="arial" click="Alert.show('Cliquei no Botão Novo','Msg')"/>
+	<mx:Button x="156" y="255" label="Salvar" color="yellow" width="100"
+			   height="40" fontSize="14" fontFamily="arial"/>
+	<mx:TextInput x="98" y="76" width="50"/>
+	<mx:TextInput x="218" y="76" width="93"/>
+	<mx:TextInput x="115" y="113" width="284"/>
+	<mx:TextInput x="467" y="112" width="93"/>
+	<mx:Label x="49" y="78" text="Código.:"/>
+	<mx:Label x="169" y="79" text="Nome.:"/>
+	<mx:Label x="329" y="10" fontSize="34" text="Cadastro de pessoas"/>
+	<mx:Label x="49" y="116" text="Endereço"/>
+	<mx:Label x="418" y="114" text="Cidade"/>
+	<mx:RadioButtonGroup id="radiogrupo_sexo"/>
+	<mx:RadioButton x="48" y="170" label="Masculino" groupName="radiogrupo_sexo"/>
+	<mx:RadioButton x="134" y="170" label="Feminino" groupName="radiogrupo_sexo"/>
+	<mx:Label x="49" y="141" text="Sexo.:"/>
+	<mx:ComboBox x="637" y="112" width="65">
+		<mx:ArrayCollection>
+			<mx:String>RS</mx:String> 
+			<mx:String>SC</mx:String> 
+			<mx:String>PR</mx:String> 
+			<mx:String>MG</mx:String> 
+			<mx:String>TO</mx:String> 
+			<mx:String>MG</mx:String> 
+			<mx:String>SP</mx:String> 
+			<mx:String>RJ</mx:String> 
+			<mx:String>CE</mx:String> 
+			<mx:String>AM</mx:String> 
+		</mx:ArrayCollection>
+	</mx:ComboBox>
+	<mx:Label x="585" y="112" text="Estado"/>
+	<mx:Label x="47" y="196" text="Data Nascimento"/>
+	<mx:DateField x="48" y="226"/>
+	<mx:Button x="264" y="255" label="Excluir" color="yellow" width="100"
+			   height="40" fontSize="14" fontFamily="arial"/>
+	<mx:Button x="372" y="255" label="Alterar" color="yellow" width="100"
+			   height="40" fontSize="14" fontFamily="arial"/>
+	<mx:RadioButtonGroup id="casado"/>
+	<mx:Label x="538" y="168" text="Casado?"/>
+	<mx:DataGrid x="47" y="303" width="981">
+		<mx:ArrayCollection>
+			<mx:Object>
+				<mx:Código>1</mx:Código>
+				<mx:Nome>Filipe Pacheco Quina</mx:Nome>
+				<mx:Endereço>Rua Joaquim Marques Coimbra </mx:Endereço>
+				<mx:UF>MG</mx:UF>
+			</mx:Object>
+			<mx:Object>
+			<mx:Código>2</mx:Código>
+			<mx:Nome>Kaique Pacheco Quina</mx:Nome>
+			<mx:Endereço>Rua Joaquim Marques Coimbra 382 </mx:Endereço>
+			<mx:UF>MG</mx:UF>
+			</mx:Object>
+			<mx:Object>
+			<mx:Código>1</mx:Código>
+			<mx:Nome>Eliana de Fátima Pacheco Quina</mx:Nome>
+			<mx:Endereço>Rua Joaquim Marques Coimbra </mx:Endereço>
+			<mx:UF>MG</mx:UF>
+			</mx:Object>
+		</mx:ArrayCollection>
+	</mx:DataGrid>
+	<mx:RadioButton x="538" y="197" label="Sim" groupName="casado"/>
+	<mx:RadioButton x="538" y="222" label="Não" groupName="casado"/>
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert
+		]]>
+	</mx:Script>
+	
+		
+</mx:Application>
